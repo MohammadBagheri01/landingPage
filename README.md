@@ -1,7 +1,7 @@
 # landingPage
 ## This page is responsive and I have used 
 ---
-*HTML *    
+*HTML*    
 *CSS*    
 *Grid*       
 ---
