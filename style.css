@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+/*****__________________________________________________________________________Main______________________________________________________________*****/
+
+
+body{
+    font-family:  'Arial Narrow' ;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 90vh repeat(5,max-content);
+    grid-template-columns: repeat(6,1fr);
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2rem;
+    color: orange;
+    padding: 2rem;
+}
+.section-title::before , .section-title::after{
+content: "";
+background-color: #000;
+width: 5rem;
+height: 1px;
+display: inline-block;
+vertical-align: middle;
+position: relative;
+}
+.section-title::before{
+right: 12px;
+
+}
+.section-title::after{
+    left: 8px;
+    }
+
+    @media screen and (max-width:400px){
+        .section-title{
+            font-size: 1.5rem;
+        }
+        .section-title::before , .section-title::after{
+            width: 2.5rem;
+        }
+    }
+
+/*****__________________________________________________________________________header______________________________________________________________*****/
+
+.header{
+    grid-column: 1/-1;
+    background-image: linear-gradient(to bottom,#000 5%, #000000d8 15%,  #4d4c4c4f ,#000000d8 90%, #000 100%),url("images/ee.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows: repeat(3,min-content);
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 2rem;
+
+}
+
+
+.header-1{
+    color: white;
+font-size: 35px;
+}
+
+
+.header-2{
+    color: white;
+    font-size: 45px;
+    
+    
+}
+
+
+.header-text{
+   
+    color: orange;
+}
+
+
+.header-btn{
+    background-color: orange;
+color: white;
+border: 1px solid orange;
+border-radius: 5px;
+justify-self: center;
+font-size: 1rem;
+padding: 20px 30px;
+}
+
+
+.header-btn:hover{
+    transition: all .4s;
+    background-color: white;
+    color: orange;
+    cursor: pointer;
+    
+}
+
+@media screen and (max-width:530px) {
+    .header-1{
+        font-size: 20px;
+    }
+
+.header-2{
+    font-size: 30px;
+}
+.header-btn{
+    padding: 10px 20px;
+}
+}
+/*****_____________________________________________________________________Story__________________________________________________________________*****/
+.story{
+    grid-column: 1/-1;
+
+}
+.section-story{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(230px , 1fr));
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 1rem;
+
+}
+.images{
+    width: 100%;
+    border-radius:10px;
+    height: 300px;
+  
+
+}
+.images:hover{
+    box-shadow: 2px 3px 10px 10px rgba(0, 0, 0, 0.281);
+    cursor: pointer;
+    transition: all .3s;
+}
+@media screen and (max-width:982px) {
+    .image-4{
+        grid-column: 2/3;
+    }
+}
+@media screen and (max-width:550px) {
+    .image-4{
+        grid-column: auto;
+    }
+}
+
+/*****_____________________________________________________________________service_______________________________________________________________*****/
+
+.service{
+   
+    grid-column: 2/6;
+}
+
+.service-section{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    grid-template-rows: repeat(2,350px);
+    grid-auto-rows: 350px;
+    grid-gap: 2rem;
+  
+    
+}
+.service-image{
+    border-radius: 0 20%;
+    transition: all .3s;
+    width: 100%;
+ height: 80%;
+}
+.service-img-label{
+    text-align: center;
+    font-size: 20px;
+}
+.service-img-text{
+    text-align: center;
+    font-size: 14px;
+    margin-top: .5rem;
+}
+
+.service-image:hover{
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 20% 0;
+
+}
+
+/*****_____________________________________________________________________reserve_______________________________________________________________*****/
+.reserve{
+    grid-column: 1/-1;
+}
+.reserves-section{
+    background-image: linear-gradient(to bottom,   #292929d8 90%, #000 100%),url("images/order-background.jpg");
+    
+   
+
+      display: grid;
+      grid-template-columns: 50px repeat(4,1fr) 50px;
+      grid-template-rows: 1fr;
+      text-align: center;
+      padding: 50px;
+      font-size: 25px;
+}
+.left{
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.829);
+    color: white;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 2fr 1fr repeat(3, .5fr) 2fr;
+}
+.right{
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.73);
+    grid-column: 3/6;
+    display: grid;
+    grid-template-rows: .5fr 1fr .5fr 1fr 2fr;
+}
+.left-img-box{
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+}
+.reserve-img{
+    width: 100%;
+    height: 100px;
+    clip-path: circle(20% at 50% 50%);
+}
+.reserve-bottom-text{
+    font-family: 'Satisfy', cursive;
+    align-self: center;
+    font-size: .75rem;
+}
+.reserve-branch,
+.right-title{
+    font-size: 1.5rem;
+    font-family: 'Satisfy', cursive;
+    color: rgb(230, 150, 2);
+}
+.parantes{
+    color: goldenrod;
+}
+
+@media screen and (max-width:750px) {
+    .reserves-section{
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+@media screen and (max-width:450px) {
+    .reserves-section{
+        grid-template-columns:15px repeat(4,1fr) 15px;
+
+        padding:  10px 0;
+    }
+}
+
+
+/*****_____________________________________________________________________gallery_______________________________________________________________*****/
+.gallery{
+    grid-column: 1/-1;
+}
+.section-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 280px);
+    grid-template-areas: "gallery_1 gallery_1 gallery_2" "gallery_3 gallery_4 gallery_2" "gallery_3 gallery_5 gallery_5";
+    padding: 20px 50px;
+    gap: 1rem;
+}
+.gallery-items{
+    width: 100%;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.gallery-img-1{
+    grid-area: gallery_1;
+    background-image:url("images/gallery-1.jpg") ;
+}
+.gallery-img-2{
+    grid-area: gallery_2;
+
+    background-image: url("images/gallery-2.jpg") ;
+    
+
+}
+.gallery-img-3{
+    grid-area: gallery_3;
+
+    background-image:url("images/gallery-3.jpg")  ;
+  
+
+}
+.gallery-img-4{
+    grid-area: gallery_4;
+
+    background-image: url("images/gallery-4.jpg") ;
+ 
+
+}
+.gallery-img-5{
+    grid-area: gallery_5;
+
+    background-image:url("images/gallery-5.jpg")  ;
+  
+
+}
+
+@media screen and (max-width: 1000px) {
+    .section-gallery {
+        grid-template-areas: "gallery_1 gallery_1 gallery_2" "gallery_3 gallery_4 gallery_4" "gallery_5 gallery_5 gallery_5";
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 280px);
+        grid-template-areas: "gallery_1 gallery_1" "gallery_3 gallery_2" "gallery_4 gallery_4" "gallery_5 gallery_5";
+    }
+}
+
+
+/*****_____________________________________________________________________footer_______________________________________________________________*****/
+.footer{
+    grid-column: 1/-1;
+    margin-top: 1rem ;
+    border-top: 1px solid black;
+    background-color: whitesmoke;
+
+}
+.footer-section{
+    padding: 35px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+   grid-template-rows: 1fr;
+   grid-gap: 7px;
+}
+li{
+    margin-top: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.copy {
+    color: orange;
+ 
+    margin-top: 1rem;
+}
+.copy-text{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 1rem;
+}
+.footer-title{
+    color: orange;
+}
+.telegram:hover{
+    transition: all .3s;
+    color: rgb(0, 132, 255);
+}
+.whatsapp:hover{
+    transition: all .3s;
+
+    color: rgb(5, 172, 19);
+}
+.youtube:hover{
+    transition: all .3s;
+
+    color: rgb(255, 51, 0);
+}
+li:hover{
+    transition: all .3s;
+
+color: orange;
+}
+@media screen and (max-width:477px) {
+    .footer-section{
+        text-align: start;
+       
+    }
+}
